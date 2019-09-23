@@ -5,7 +5,6 @@
 require_relative '../main.rb'
 
 RSpec.describe Enumerable do
-
   let(:array_1) { [1, 2, 3] }
   let(:array_2) { [3] }
   let(:array_3) { [nil, true, 99] }
@@ -23,7 +22,7 @@ RSpec.describe Enumerable do
     it 'iterates through an array and its index' do
       expect(array_1.my_each_with_index { |x, y| x + y }).to eql(array_1)
       expect(array_1.my_each_with_index { |x, y| x * y }).to eql(array_1)
-      expect(array_1.my_each_with_index { |x, y| x * 2 }).to eql(array_1)
+      expect(array_1.my_each_with_index { |x, y| x - y }).to eql(array_1)
     end
   end
 
