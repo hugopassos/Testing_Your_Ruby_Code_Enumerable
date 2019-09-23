@@ -1,6 +1,8 @@
-#spec/enumerables_spec.rb
+# frozen_string_literal: true
 
-require_relative "../main.rb"
+# spec/enumerables_spec.rb
+
+require_relative '../main.rb'
 
 RSpec.describe Enumerable do
 
@@ -9,11 +11,11 @@ RSpec.describe Enumerable do
   let(:array_3) { [nil, true, 99] }
   let(:array_4) { [1, 2, 3, 1, 2, 3, 4, 1, 2, 3] }
 
-  describe "#my_each" do
+  describe '#my_each' do
     it 'iterates through an array' do
       expect(array_1.my_each { |x| x }).to eql(array_1)
       expect(array_1.my_each { |x| x * 2 }).to eql(array_1)
-      expect(array_1.my_each { |x| x ** 2 }).to eql(array_1)
+      expect(array_1.my_each { |x| x * 4 }).to eql(array_1)
     end
   end
 
